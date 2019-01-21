@@ -13,7 +13,7 @@ Here is the [tutorial](https://fgc.stpi.narl.org.tw/activity/videoDetail/4b11413
 git clone https://github.com/ywk991112/pytorch-chatbot
 ```
 #### Corpus
-In the corpus file, the input-output sequence pairs should be in the adjacent lines. For example, 
+In the corpus file, the input-output sequence pairs should be in the adjacent lines. For example,
 ```
 I'll see you next time.
 Sure. Bye.
@@ -58,5 +58,9 @@ python main.py -te <MODEL_FILE_PATH> -c <CORPUS_FILE_PATH> -i
 ```
 Beam search with size k.
 ```
-python main.py -te <MODEL_FILE_PATH> -c <CORPUS_FILE_PATH> -be k [-i] 
+python main.py -te <MODEL_FILE_PATH> -c <CORPUS_FILE_PATH> -be k [-i]
 ```
+
+#### Docker support
+
+Using ```run.sh``` script will first build the docker image (if needed) and then use nvidia-docker to launch the container in test mode.
