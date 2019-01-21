@@ -25,7 +25,9 @@ def parse():
     return args
 
 def parseFilename(filename, test=False):
+	#print (filename)
     filename = filename.split('/')
+	#print (filename)
     dataType = filename[-1][:-4] # remove '.tar'
     parse = dataType.split('_')
     reverse = 'reverse' in parse
